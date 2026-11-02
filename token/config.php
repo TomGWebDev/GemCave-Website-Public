@@ -23,6 +23,17 @@ $dbusername = "";
 $dbpass = "";
 $dbname = "";
 
+function getTelegramApiUrl($method)
+{
+	$botToken = getenv('TELEGRAM_BOT_TOKEN');
+	if ($botToken === false || $botToken === '') {
+		error_log('Telegram notification skipped: TELEGRAM_BOT_TOKEN is not configured.');
+		return false;
+	}
+
+	return 'https://api.telegram.org/bot'.$botToken.'/'.$method;
+}
+
 /* ------------------------------ */
 /* GLOBAL GAMES CONFIG            */
 /* ------------------------------ */
@@ -668,8 +679,13 @@ function sendTGMsg($walletId, $prizeWon, $gamePlayed){
 		]
 	}');
 
+	$telegramApiUrl = getTelegramApiUrl('sendmessage');
+	if ($telegramApiUrl === false) {
+		return;
+	}
+
 	$curl_handle=curl_init();
-	curl_setopt($curl_handle, CURLOPT_URL,"https://api.telegram.org/bot[REDACTED]/sendmessage?disable_web_page_preview=true&parse_mode=html&chat_id=-1001731677896&text=".$buildMsg.'&reply_markup='.$inlineKB);
+	curl_setopt($curl_handle, CURLOPT_URL,$telegramApiUrl."?disable_web_page_preview=true&parse_mode=html&chat_id=-1001731677896&text=".$buildMsg.'&reply_markup='.$inlineKB);
 	curl_setopt($curl_handle, CURLOPT_CONNECTTIMEOUT, 2);
 	curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($curl_handle, CURLOPT_USERAGENT, 'TGGEM');

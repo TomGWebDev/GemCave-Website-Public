@@ -22,8 +22,13 @@ function sendStakeTGMsg($walletId, $gemsAmount, $stakingProduct){
 		]
 	}');
 
+	$telegramApiUrl = getTelegramApiUrl('sendphoto');
+	if ($telegramApiUrl === false) {
+		return;
+	}
+
 	$curl_handle=curl_init();
-	curl_setopt($curl_handle, CURLOPT_URL,"https://api.telegram.org/bot[REDACTED]/sendphoto?photo=https://stake.gemcave.org/dp.jpg&parse_mode=html&chat_id=-1001731677896&caption=".$buildMsg.'&reply_markup='.$inlineKB);
+	curl_setopt($curl_handle, CURLOPT_URL,$telegramApiUrl."?photo=https://stake.gemcave.org/dp.jpg&parse_mode=html&chat_id=-1001731677896&caption=".$buildMsg.'&reply_markup='.$inlineKB);
 	curl_setopt($curl_handle, CURLOPT_CONNECTTIMEOUT, 2);
 	curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($curl_handle, CURLOPT_USERAGENT, 'TGGEM');

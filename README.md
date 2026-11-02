@@ -27,3 +27,6 @@ The following summaries and figures are from the supplied archived site informat
 - **Gaming:** Wallet-connected arcade games where GEMS holdings affect play frequency. Players can earn credits and manage prizes through the gaming dashboard.
 - **GemCave DIG NFT:** A collectible gem-themed collection using on-chain NFT data. The archived site reported 5,000 NFTs minted, none remaining, 166 holders, 5k NFT transactions, and 5 trillion GEMS burned during minting.
 - **Avatar NFT:** A limited collection of 500 gem-themed character NFTs with on-chain data. The archived site reported approximately 170 minted, 30 holders, a 7.5 billion GEMS minting price, and 1 trillion GEMS burned.
+## Runtime configuration
+
+Set `TELEGRAM_BOT_TOKEN` in the server environment to enable Telegram game, staking, and NFT notifications. Do not put bot tokens or other credentials in source files or commit them to Git. Notifications are skipped and an error is written to the PHP error log when the variable is missing.
