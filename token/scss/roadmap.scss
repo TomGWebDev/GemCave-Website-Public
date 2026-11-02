@@ -1,0 +1,352 @@
+@import "scss/vars";
+
+#roadmap {
+	position: relative;
+	margin: 0;
+	padding: 50px 0;
+	background-color: #310155;
+
+	.gems-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		overflow: hidden;
+		pointer-events: none;
+	}
+
+	.gems-bg-shadow {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		box-shadow: inset 0px 0px 15px 25px #310155;
+		z-index: 2;
+		pointer-events: none;
+	}
+
+	.container {
+		padding: 0 50px;
+
+		p {
+			color: #af9ce3;
+			max-width: 800px;
+		}
+	}
+}
+
+#taxes,
+#distribution {
+	position: relative;
+	margin: 0;
+	padding: 50px;
+	background-color: $purple4;
+
+	&.odd {
+		background-color: #af9ce3;
+	}
+
+	h1,
+	p {
+		text-shadow:
+			0 0 5px #c0bcf7,
+			0 0 5px #c0bcf7;
+		color: $dark;
+	}
+
+	a {
+		color: #4e0883;
+	}
+
+	.sprinkles-bg {
+		position: absolute;
+		top: -25px;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: visible;
+		opacity: 0.4;
+
+		path {
+			fill: none;
+			stroke-linecap: round;
+			stroke-linejoin: round;
+			stroke-width: 0.2;
+			stroke: $blue2;
+		}
+	}
+
+	.roadmap-cont {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		margin: 40px 0;
+
+		@media (max-width: $menuWidth) {
+			display: block;
+		}
+	}
+
+	.roadmap-box {
+		margin: 0 15px auto 15px;
+		border-radius: 8px;
+		padding: 0;
+		flex: 1 1 0;
+		overflow: hidden;
+		border: 4px solid $purple2;
+		background-color: $purple4;
+
+		@media (max-width: $mobileWidth) {
+			min-width: 0;
+			max-width: 100%;
+		}
+		@media (max-width: $menuWidth) {
+			margin: 15px 0;
+		}
+
+		&.roadmap-stack {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			border: none;
+			margin: 0;
+			background: none;
+
+			@media (max-width: $tabletWidth) {
+				flex-direction: row;
+			}
+
+			@media (max-width: $mobileWidth) {
+				display: block;
+			}
+
+			.roadmap-box {
+				margin-bottom: 20px;
+
+				&:first-of-type {
+					@media (max-width: $tabletWidth) {
+						margin-right: 20px;
+					}
+					@media (max-width: $mobileWidth) {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+
+		.opp {
+			background-color: $dark;
+			color: #fff;
+			padding: 10px;
+			p {
+				text-shadow: none;
+				font-size: 16px;
+				color: #fff;
+			}
+			a {
+				display: block;
+				border-radius: 20px;
+				padding: 10px;
+				margin: 0 auto 0 auto;
+				text-decoration: none;
+				background-color: $orange;
+				color: $dark;
+				text-align: center;
+				font-size: 15px;
+			}
+			h4 {
+				width: 100%;
+				margin: 15px 0 0 0;
+				text-align: center;
+				color: $orange;
+				font-size: 28px;
+			}
+		}
+
+		.white {
+			background-color: #fff;
+			color: #000;
+			margin-bottom: 0;
+			padding: 10px;
+
+			p {
+				text-shadow: none;
+				font-size: 16px;
+				margin-bottom: 0;
+			}
+			.roadmap-item {
+				margin-bottom: 0;
+			}
+			a {
+				display: block;
+				border-radius: 20px;
+				padding: 10px;
+				margin: 20px auto 0 auto;
+				text-decoration: none;
+				background-color: #000;
+				color: #fff;
+				text-align: center;
+				font-size: 15px;
+			}
+			h4 {
+				width: 100%;
+				margin: 15px 0 0 0;
+				text-align: center;
+				color: $dark;
+				font-size: 28px;
+			}
+		}
+
+		.roadmap-title {
+			padding: 0;
+			margin: 9px 9px 25px 9px;
+			border-radius: 8px;
+			font-size: 28px;
+			text-align: center;
+
+			h4 {
+				width: 100%;
+				margin: 15px 0 0 0;
+				text-align: center;
+				color: $dark;
+			}
+		}
+
+		.roadmap-item {
+			margin: 15px 20px;
+			border-bottom: 1px solid $dark;
+			padding-bottom: 15px;
+
+			font-size: 18px;
+			line-height: 125%;
+
+			&:last-of-type {
+				border: none;
+			}
+
+			svg {
+				width: 30px;
+			}
+
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+@keyframes textIn {
+	0% {
+		transform: translate(100%, 0);
+	}
+	100% {
+		transform: translate(0px, 0);
+	}
+}
+
+/* Timeline */
+
+.timeline-horizontal {
+	list-style: none;
+	position: relative;
+	display: inline-block;
+
+	list-style: none;
+	padding: 20px 80px;
+	position: relative;
+
+	&:before {
+		position: absolute;
+		content: " ";
+		background-color: #5c188f;
+		top: auto;
+		bottom: 50px;
+		height: 8px;
+		left: 0;
+		right: 0;
+		width: 100%;
+	}
+	.timeline-item {
+		position: relative;
+		display: table-cell;
+		height: 280px;
+		width: 20%;
+		min-width: 320px;
+		float: none !important;
+		padding: 0px;
+		margin: 0 auto;
+		vertical-align: bottom;
+
+		&:before,
+		&:after {
+			content: "";
+			display: table;
+		}
+		&:after {
+			clear: both;
+		}
+		.timeline-badge {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			color: #5c188f;
+			width: 60px;
+			height: 60px;
+			line-height: 19px;
+			font-size: 19px;
+			text-align: center;
+			margin-left: -50px;
+			background-color: #c0bcf7;
+			border: 6px solid #5c188f;
+			z-index: 100;
+			border-top-right-radius: 50%;
+			border-top-left-radius: 50%;
+			border-bottom-right-radius: 50%;
+			border-bottom-left-radius: 50%;
+
+			top: auto;
+			bottom: 0px;
+			left: 45%;
+		}
+		.timeline-panel {
+			position: relative;
+			background: #fff;
+			padding: 25px;
+			box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+			display: inline-block;
+			float: none;
+			width: 350px;
+			max-width: 90%;
+			background-color: #c0bcf7;
+			border: 4px solid #5c188f;
+			border-radius: 8px;
+			margin: 0 20px 90px 0;
+
+			.timeline-title {
+				margin-top: 0;
+				color: inherit;
+			}
+			.timeline-body > p,
+			.timeline-body > ul {
+				margin-bottom: 0;
+				font-size: 13px;
+			}
+
+			.timeline-body > ul {
+				margin-left: 20px;
+
+				li {
+					margin-bottom: 6px;
+				}
+			}
+			.timeline-body > p + p {
+				margin-top: 5px;
+			}
+		}
+	}
+}

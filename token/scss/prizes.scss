@@ -1,0 +1,94 @@
+@import "scss/vars";
+
+body#page-prizes {
+	background: linear-gradient(
+		180deg,
+		$purple2,
+		$purple3 65%,
+		$purple3 85%,
+		$purple2
+	);
+
+	header {
+		position: relative;
+	}
+}
+
+#prizes {
+	padding: 30px;
+	min-height: 50vh;
+
+	@media (max-width: $mobileWidth) {
+		margin-top: 80px;
+	}
+
+	p {
+		color: $light;
+	}
+
+	.prize-list {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	.prize-item {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		min-width: 200px;
+		background-color: $dark;
+		padding: 15px;
+		border-radius: 20px;
+		margin: 15px;
+
+		.prize-count {
+			background-color: $light;
+			padding: 5px;
+			font-size: 35px;
+			color: $dark;
+			border-radius: 10px;
+			flex-shrink: 0;
+		}
+
+		.prize-name {
+			margin: 0 15px;
+			color: $light;
+		}
+	}
+}
+
+#prize-admin {
+	color: $light;
+
+	.prize-item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		min-width: 200px;
+		background-color: $dark;
+		padding: 15px;
+		border-radius: 20px;
+		margin: 15px;
+	}
+
+	a.delgo {
+		background: red;
+		color: #fff;
+		padding: 20px;
+		border-radius: 30px;
+		margin: 15px;
+	}
+	p {
+		color: $light;
+	}
+	textarea {
+		width: 80%;
+		margin: auto;
+		height: 100px;
+	}
+}

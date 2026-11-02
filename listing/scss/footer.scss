@@ -1,0 +1,70 @@
+@import "scss/vars";
+
+footer {
+	display: block;
+	position: relative;
+
+	.footer-main {
+		padding: 25px 50px;
+		position: relative;
+		z-index: 10;
+
+		background-image: linear-gradient(90deg, #976fbd, #93d9cc);
+		background-size: 150% 200%;
+		animation: gradient 8s ease infinite;
+		transition: all 300ms ease-in-out;
+
+		.footer-container {
+			display: flex;
+			flex-direction: row;
+			align-items: flex-end;
+			justify-content: space-between;
+
+			@media (max-width: $mobileWidth) {
+				display: block;
+				text-align: center;
+			}
+
+			.footer-1,
+			.footer-2,
+			.footer-3 {
+				flex: 1;
+				color: #fff;
+
+				a {
+					color: #fff;
+				}
+			}
+
+			.footer-3 {
+				p {
+					margin: 0 0 0 auto;
+					max-width: 300px;
+					font-size: 13px;
+					text-align: right;
+					font-weight: 400;
+					letter-spacing: 1px;
+
+					@media (max-width: $mobileWidth) {
+						display: block;
+						text-align: center;
+						margin: 15px auto;
+					}
+				}
+			}
+
+			.footer-logo {
+				height: 110px;
+
+				.footer-svg {
+					width: auto;
+					height: 100%;
+
+					path {
+						stroke: $light !important;
+					}
+				}
+			}
+		}
+	}
+}

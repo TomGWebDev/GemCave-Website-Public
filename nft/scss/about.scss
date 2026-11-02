@@ -1,0 +1,83 @@
+@import "scss/vars";
+
+#about {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+
+	background-color: #0b0212;
+	margin: 50px;
+	padding: 50px;
+	border-radius: 20px;
+
+	@media (max-width: 830px) {
+		margin: 0 0 30px 0;
+		padding: 20px;
+	}
+
+	.abouttext {
+		display: flex;
+		align-items: row;
+
+		@media (max-width: 830px) {
+			flex-direction: column;
+		}
+
+		svg {
+			width: 300px;
+		}
+
+		a {
+			margin: 10px auto;
+			background-color: #6b4a85;
+			padding: 10px;
+			border-radius: 10px;
+			color: #0b0212;
+			display: flex;
+			text-decoration: none;
+			font-weight: 700;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	.featurepop {
+		background-color: $light;
+		padding: 10px;
+		margin: 20px 0 0 0;
+		border-radius: 10px;
+		color: #0b0212;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.chain-svg {
+			margin: 0 5px;
+			height: 15px;
+			fill: #6c66a3;
+			transition: none;
+			overflow: visible;
+			transform: translateY(2px) scale(1.25);
+		}
+
+		.lock-svg {
+			margin: 0 5px;
+			height: 15px;
+			stroke: #6c66a3;
+			stroke-width: 3px;
+			transition: none;
+			overflow: visible;
+			transform: translateY(2px) scale(1.25);
+		}
+
+		.inf-svg {
+			margin: 0 5px;
+			height: 15px;
+			stroke: #6c66a3;
+			stroke-width: 3px;
+			transition: none;
+			overflow: visible;
+			transform: translateY(2px) scale(1.5);
+		}
+	}
+}

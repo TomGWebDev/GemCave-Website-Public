@@ -1,0 +1,178 @@
+body#nft {
+	background: linear-gradient(
+		90deg,
+		rgba(102, 80, 122, 1) 0%,
+		rgba(28, 19, 36, 1) 50%,
+		rgba(102, 80, 122, 1) 100%
+	);
+	color: #b2a1c1;
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		font-family: "Kanit", sans-serif;
+		font-weight: 900;
+		font-style: italic;
+		margin: 0;
+	}
+
+	p {
+		max-width: 650px;
+		margin: auto;
+		text-align: center;
+		font-size: 16px;
+		line-height: 120%;
+		letter-spacing: 0.6px;
+		margin: 5px 0;
+	}
+
+	header {
+		position: relative;
+		width: auto;
+		background-color: transparent;
+		padding: 30px;
+		display: flex;
+		flex-direction: column;
+
+		.logo-top {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+
+			svg {
+				width: 200px;
+			}
+		}
+
+		h2 {
+			margin-bottom: 50px;
+			font-family:
+				Ceviche One,
+				cursive;
+			color: #53e7d3;
+			letter-spacing: 2px;
+			font-size: 40px;
+			word-spacing: 4px;
+			line-height: 50%;
+		}
+
+		h1 {
+			color: #53e7d3;
+			margin-bottom: 20px;
+		}
+
+		h4 {
+			color: #53e7d3;
+			margin-top: 20px;
+		}
+	}
+
+	.container {
+		max-width: 1100px;
+		padding: 0 50px 50px 50px;
+		margin: auto;
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		column-gap: 50px;
+	}
+
+	.specsheet {
+		display: block;
+		background-color: #5c486f;
+		padding: 20px;
+		border-radius: 25px;
+		max-width: 370px;
+
+		.specitem {
+			border-radius: 15px;
+			background-color: #d9d3de;
+			padding: 15px;
+			margin: 10px;
+			flex: 1;
+
+			display: flex;
+			flex-direction: column;
+
+			width: 135px;
+			height: auto;
+
+			float: left;
+
+			&.rare {
+				background-color: #1c1324;
+
+				p {
+					color: #5c486f;
+				}
+			}
+
+			h2 {
+				font-size: 18px;
+				color: #5c486f;
+			}
+
+			p {
+				text-align: right;
+				color: #1f1527;
+				letter-spacing: -0.7px;
+				font-size: 12px;
+				margin: auto 0 0;
+			}
+
+			.range {
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+				margin: 10px 0 0 0;
+
+				.option {
+					color: #5c486f;
+					font-size: 12px;
+					letter-spacing: -1px;
+					background: #aea9b3;
+					display: inline-block;
+					padding: 3px;
+					margin: 2px 3px;
+					border-radius: 5px;
+					text-align: center;
+					flex: 1 1 auto;
+					min-width: 26px;
+
+					&.max {
+						color: #40235c;
+						font-size: 13px;
+						font-weight: 700;
+						flex: 2 0 auto;
+					}
+				}
+			}
+		}
+	}
+
+	.mint-box {
+		svg.mint-nft {
+			width: 350px;
+			height: 700px;
+			overflow: visible;
+
+			.connect-wallet {
+				cursor: pointer;
+
+				&:hover {
+					.connect-bg {
+						opacity: 1;
+					}
+				}
+
+				.connect-bg {
+					transition: all 250ms ease-in-out;
+				}
+			}
+		}
+	}
+}

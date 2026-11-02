@@ -1,0 +1,355 @@
+@import "scss/vars";
+
+#page-stake {
+	header {
+		position: absolute;
+
+		.menu2 {
+			margin: 0;
+
+			nav {
+				padding-top: 10px;
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+
+				a {
+					border: 1px solid #09b0b3;
+					padding: 5px 12px;
+					border-radius: 10px;
+					margin: 0 4px;
+					font-size: 15px;
+					font-weight: 300;
+					color: #09b0b3;
+					text-decoration: none;
+				}
+			}
+		}
+		.container {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		.logo {
+			width: 100%;
+			max-width: 550px;
+			margin: 0 15px;
+			padding: 50px 0 0 0;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+	#game-dash {
+		background: rgb(173, 112, 218);
+		background: radial-gradient(
+			circle,
+			#205855 0,
+			#310155 50%,
+			#310155 75%,
+			#ad70da 100%
+		);
+		padding-top: 350px;
+
+		.title-info {
+			justify-content: center;
+
+			.text-side {
+				text-align: center;
+				max-width: 650px;
+
+				h2 {
+					font-size: 40px;
+					color: #2edcdf;
+					margin-bottom: 25px;
+				}
+				p {
+					color: #deb2ff;
+					font-size: 20px;
+					margin: 30px 0;
+				}
+			}
+		}
+
+		.button {
+			background-color: #310155;
+			border: 5px solid #2edcdf;
+			border-radius: 9px;
+			color: #2edcdf;
+			cursor: pointer;
+			font-size: 26px;
+			font-weight: 800;
+			padding: 12px 23px;
+		}
+	}
+}
+
+#stake-dash {
+	padding: 50px 0;
+	overflow: hidden;
+	background: linear-gradient(
+		180deg,
+		#310155,
+		#5c47af 65%,
+		#5c47af 85%,
+		#310155
+	);
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		padding: 50px 25px;
+		width: auto;
+	}
+
+	h1,
+	h2,
+	h3 {
+		color: #2edcdf;
+	}
+
+	.title-info {
+		margin: 0 0 15px 0;
+
+		h1 {
+			margin-bottom: 5px;
+			font-size: 70px;
+			color: $light;
+			font-family: "Ceviche One", cursive;
+		}
+
+		p {
+			color: $light;
+			margin: 0;
+			font-weight: 200;
+			max-width: 750px;
+		}
+
+		.button {
+			background-color: #310155;
+			border: 5px solid #2edcdf;
+			border-radius: 9px;
+			color: #2edcdf;
+			cursor: pointer;
+			font-size: 26px;
+			font-weight: 800;
+			padding: 12px 23px;
+			margin-top: 25px;
+		}
+	}
+
+	.product-list {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		margin-top: 0;
+
+		.product-item {
+			align-items: stretch;
+			display: flex;
+			flex-direction: column;
+			justify-content: stretch;
+			margin: 0.5% 0.5%;
+			padding: 0;
+			width: 24%;
+			min-width: 210px;
+
+			.button {
+				font-size: 17px;
+				font-weight: 800;
+				cursor: pointer;
+				padding: 10px 18px;
+				border-radius: 9px;
+				border: 5px solid $purple4;
+				background-color: $purple2;
+				color: $purple4;
+			}
+
+			.product-title {
+				background-color: $dark;
+				border: 6px solid $dark;
+				border-bottom: 0;
+				border-radius: 20px 20px 0 0;
+				padding: 10px 10px 15px 10px;
+				letter-spacing: -1px;
+				text-align: center;
+
+				display: flex;
+				flex-direction: column;
+
+				align-items: center;
+				justify-content: center;
+
+				.icon svg {
+					display: block;
+					overflow: visible;
+					width: 35px;
+					height: 35px;
+					margin-right: 10px;
+				}
+
+				h3 {
+					align-items: center;
+					font-size: 32px;
+					font-weight: 900;
+					margin: 0 0 10px;
+					text-align: center;
+					letter-spacing: 0.4px;
+					width: 100%;
+					text-align: center;
+				}
+
+				h4 {
+					align-items: center;
+					font-size: 17px;
+					font-weight: 500;
+					margin: 0 0 10px;
+					text-align: center;
+					letter-spacing: 0.4px;
+					border-bottom: 1px solid #c0bce8;
+					padding-bottom: 15px;
+					width: 100%;
+					text-align: center;
+				}
+
+				.info {
+					color: #c0bcf7;
+					padding: 5px;
+					font-size: 14px;
+					letter-spacing: 0px;
+				}
+			}
+
+			.product-body {
+				border: 6px solid #310155;
+				border-radius: 0 0 0 20px;
+				border-top: 0;
+				padding: 20px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+
+				h3 {
+					text-align: center;
+					color: #310155;
+				}
+			}
+
+			.count {
+				font-size: 27px;
+				font-weight: 900;
+				height: 41px;
+				padding: 0 10px;
+
+				mix-blend-mode: difference;
+				position: relative;
+				z-index: 10;
+				color: #fff;
+
+				span.big {
+					font-size: 35px;
+				}
+				span.small {
+					font-size: 12px;
+					font-weight: 400;
+				}
+			}
+
+			.won {
+				display: none;
+				padding: 5px;
+				font-size: 11px;
+				background-color: $dark;
+				color: $light;
+			}
+
+			.strap {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+
+				&.addstake,
+				&.staked,
+				&.pullstake,
+				&.pullstakeunlock {
+					display: none;
+
+					&.show {
+						display: flex;
+					}
+				}
+
+				.loading-add-stake {
+					display: none;
+
+					.load-stake {
+						margin: auto;
+						background: 0 0;
+						display: none;
+						shape-rendering: auto;
+						width: 110px;
+
+						&.show {
+							display: block;
+						}
+					}
+
+					.doing-stake {
+						margin: auto;
+						background: none;
+						display: none;
+						shape-rendering: auto;
+						width: 110px;
+
+						&.show {
+							display: block;
+						}
+					}
+
+					.loading-label,
+					.approved-label,
+					.error-label,
+					.complete-label {
+						display: none;
+						text-align: center;
+						color: #310155;
+						background: none;
+						padding: 10px;
+						border-radius: 10px;
+						margin-top: 15px;
+						border: 4px dashed #310155;
+
+						&.show {
+							display: block;
+						}
+					}
+				}
+
+				p {
+					text-align: center;
+					color: #310155;
+					font-size: 16px;
+				}
+
+				.stake-amount {
+					background-color: $light;
+					padding: 5px 10px;
+					border-radius: 10px;
+					border: none;
+					margin: 5px;
+					text-align: center;
+					font-size: 14px;
+					width: 90%;
+					height: 30px;
+				}
+			}
+		}
+	}
+}

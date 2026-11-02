@@ -1,0 +1,42 @@
+@import "scss/vars";
+
+#page-admin {
+	overflow: auto;
+	background-color: #ddd;
+	color: #000;
+	width: auto;
+	padding: 0 100px 100px 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	.pop {
+		background-color: #000;
+		color: #fff;
+		text-decoration: none;
+		border-radius: 20px;
+	}
+	p,
+	h1,
+	h2,
+	h3,
+	a,
+	div {
+		color: #000;
+	}
+
+	.admin-table {
+		margin: 50px auto;
+
+		td {
+			background: $brown2;
+			padding: 20px;
+
+			pre {
+				max-width: 120px;
+				white-space: normal;
+			}
+		}
+	}
+}

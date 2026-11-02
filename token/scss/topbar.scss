@@ -1,0 +1,125 @@
+@import "scss/vars";
+
+#topbar {
+	position: fixed;
+	z-index: 900;
+	width: 96%;
+	padding: 0 2%;
+	background-color: $dark;
+	top: 0;
+
+	@media (max-width: 950px) {
+		.mobhide {
+			display: none;
+		}
+	}
+
+	#google_translate_element {
+		display: none;
+	}
+
+	.metamask-add {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		font-size: 11px;
+		color: $light;
+		border-radius: 20px;
+		background-color: #41046e;
+		padding: 4px 8px;
+		min-width: 40px;
+		margin: 0 0 0 20px;
+		cursor: pointer;
+
+		@media (max-width: $mobileWidth) {
+			display: none;
+		}
+
+		.ichold {
+			margin-left: -2px;
+			letter-spacing: -3px;
+			margin-right: 6px;
+		}
+
+		svg {
+			height: 20px;
+		}
+	}
+
+	.container {
+		height: 40px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 1400px;
+
+		@media (max-width: $mobileWidth) {
+			flex-direction: column;
+			height: auto;
+		}
+	}
+
+	.contract {
+		background-color: #41046e;
+
+		.contract-hash {
+			font-size: 12px;
+			margin: 0 3px;
+		}
+
+		svg {
+			height: 9px;
+			width: 10px;
+		}
+	}
+	.langauges {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+
+		.active svg {
+			opacity: 1;
+		}
+
+		svg {
+			width: 20px;
+			height: 20px;
+			overflow: visible;
+			margin: 5px 2px;
+			cursor: pointer;
+			opacity: 0.6;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	.links {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+
+		a {
+			display: block;
+			text-decoration: none;
+		}
+
+		svg {
+			width: 19px;
+			height: 19px;
+			fill: $purple4;
+			overflow: visible;
+			margin: 5px 3px;
+			opacity: 0.6;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+}

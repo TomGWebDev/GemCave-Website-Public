@@ -1,0 +1,98 @@
+@import "scss/vars";
+
+#topbar {
+	z-index: 900;
+	width: 100%;
+	background-color: $dark;
+
+	#google_translate_element {
+		display: none;
+	}
+
+	.container {
+		height: 40px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 1400px;
+		padding: 0 30px;
+		width: auto;
+
+		@media (max-width: $mobileWidth) {
+			flex-direction: column;
+			height: auto;
+		}
+	}
+
+	.buttons {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+
+		a {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			justify-content: center;
+			background-color: $light;
+			font-size: 12px;
+			font-weight: 400;
+			border-radius: 10px;
+			margin: auto 5px;
+			padding: 3px 8px 3px 10px;
+			text-decoration: none;
+			height: 18px;
+		}
+	}
+	.langauges {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+
+		.active svg {
+			opacity: 1;
+		}
+
+		svg {
+			width: 20px;
+			height: 20px;
+			overflow: visible;
+			margin: 5px 2px;
+			cursor: pointer;
+			opacity: 0.6;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	.links {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+
+		a {
+			display: block;
+			text-decoration: none;
+		}
+
+		svg {
+			width: 19px;
+			height: 19px;
+			fill: $purple4;
+			overflow: visible;
+			margin: 5px 3px;
+			opacity: 0.6;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+}

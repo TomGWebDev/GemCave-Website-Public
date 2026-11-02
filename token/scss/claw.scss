@@ -1,0 +1,166 @@
+@import "scss/vars";
+
+#claw {
+	background: linear-gradient(
+		180deg,
+		$purple2,
+		$purple3 65%,
+		$purple3 85%,
+		$purple2
+	);
+
+	header {
+		position: relative;
+	}
+
+	.banner-left {
+		max-width: 380px;
+	}
+
+	#game .container {
+		align-items: flex-start;
+
+		@media (max-width: 800px) {
+			flex-direction: column;
+			margin: 0;
+			padding: 0 30px;
+			width: auto;
+
+			.banner-left {
+				max-width: 100%;
+
+				.message {
+					max-width: 100%;
+				}
+			}
+			.banner-right {
+				canvas {
+					width: 100% !important;
+					margin-bottom: 5px;
+				}
+			}
+		}
+
+		.play-prize {
+			display: block;
+			width: 20px;
+			height: 20px;
+			margin: 0 15px 0 0;
+			border-radius: 100%;
+			flex-shrink: 0;
+
+			&.big {
+				width: 30px;
+				height: 30px;
+			}
+
+			&.stacker {
+				background-color: #ac20e8;
+			}
+			&.scratch {
+				background-color: #4bbe29;
+			}
+			&.wheel {
+				background-color: #f97b46;
+			}
+		}
+	}
+}
+
+.control-buttons {
+	display: none;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	user-select: none;
+
+	@media (max-width: 800px) {
+		display: flex;
+	}
+
+	.but-row {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		user-select: none;
+
+		div {
+			user-select: none;
+			background-color: $dark;
+			color: $light;
+			border-radius: 50px;
+			padding: 20px 25px;
+			font-weight: 900;
+			font-size: 19px;
+			margin: 5px;
+
+			transition: all 400ms ease-in-out;
+		}
+	}
+}
+
+#myNFT {
+	display: none;
+}
+#grabber {
+	canvas {
+		display: none;
+	}
+
+	&.on {
+		canvas {
+			display: none;
+		}
+	}
+
+	canvas {
+		border-radius: 15px;
+		margin: 0 0 50px 0;
+	}
+	#dismiss.hidden {
+		bottom: -30vmin;
+	}
+	#dismiss {
+		left: 50vw;
+		transform: translateX(calc(-50% - 1vmin));
+		bottom: 10vmin;
+	}
+	#dismiss:hover {
+		transform: translate(-50%, 1vmin);
+		box-shadow: 0 0 0 0 #823226;
+	}
+	#shelf {
+		right: 10vmin;
+		top: 10vmin;
+		height: 10vmin;
+		width: 10vmin;
+		border-radius: 100%;
+		background-image: url("https://jchabin.github.io/clawgame/icon.png");
+		background-position: center;
+		background-size: 80%;
+		background-repeat: no-repeat;
+		background-blend-mode: lighten;
+	}
+	#shelf:hover {
+		transform: translate(1vmin, 1vmin);
+		box-shadow: 0 0 0 0 #823226;
+	}
+	.button {
+		position: fixed;
+		display: inline-block;
+		font: 10vmin Nunito;
+		background: #eb6134;
+		box-shadow: 1vmin 1vmin 0 0 #823226;
+		color: white;
+		padding: 2vmin;
+		border-radius: 5vmin;
+		transition:
+			transform 0.2s,
+			box-shadow 0.2s,
+			bottom 0.3s;
+		cursor: pointer;
+	}
+}

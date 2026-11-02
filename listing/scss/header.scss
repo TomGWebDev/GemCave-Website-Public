@@ -1,0 +1,224 @@
+@import "scss/vars";
+
+header {
+	padding: 0;
+	width: 100%;
+	margin: 0;
+	transition: all 300ms ease-in-out;
+
+	.container {
+		max-width: 1400px;
+		margin: 20px auto 0 auto;
+		padding: 0 30px;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+
+		@media (max-width: $menuWidth) {
+			justify-content: space-between;
+		}
+	}
+
+	.logo {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		padding: 0;
+		margin: 0;
+		transition: all 400ms ease-in-out;
+
+		@media (max-width: $mobileWidth) {
+			justify-content: space-between;
+		}
+
+		a {
+			text-decoration: none;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+		}
+
+		img {
+			height: 120px;
+			width: auto;
+		}
+
+		.logo-text {
+			color: #4b3076;
+			font-size: 85px;
+			margin: 15px 0 0 0;
+			letter-spacing: -1px;
+			line-height: 60%;
+			word-spacing: 5px;
+			white-space: nowrap;
+			transition: all 400ms ease-in-out;
+			font-weight: 900;
+			font-family: "Kanit", sans-serif;
+			font-style: italic;
+
+			z-index: 5;
+			transform-origin: left;
+
+			@media (max-width: $tabletWidth) {
+				font-size: 70px;
+			}
+			@media (max-width: $mobileWidth) {
+				margin: 0;
+				font-size: 50px;
+			}
+			@media (max-width: 400px) {
+				display: none;
+			}
+
+			.logo-text-small {
+				font-family: Kanit, sans-serif;
+				font-size: 28px;
+				font-weight: 500;
+				margin: 5px 0 0 8px;
+				line-height: 100%;
+			}
+		}
+	}
+
+	.menu-show {
+		display: none;
+		margin: 10px;
+
+		width: 35px;
+		height: 35px;
+
+		svg {
+			width: 100%;
+			height: 100%;
+			fill: $blue;
+		}
+
+		@media (max-width: $menuWidth) {
+			display: block;
+		}
+	}
+
+	.menu {
+		margin: auto 0;
+
+		@media (max-width: $menuWidth) {
+			display: block;
+			position: fixed;
+			right: -400px;
+			top: 0;
+			width: 100%;
+			max-width: 400px;
+			height: 100vh;
+			background: #310155;
+
+			transition: all 450ms ease-in-out;
+		}
+
+		&.open {
+			right: 0px;
+			z-index: 9999;
+		}
+
+		.menu-close {
+			position: absolute;
+			top: 25px;
+			right: 25px;
+			width: 40px;
+			height: 40px;
+
+			display: none;
+
+			svg {
+				width: 100%;
+				height: 100%;
+				fill: $dark;
+				cursor: pointer;
+			}
+
+			@media (max-width: $menuWidth) {
+				display: block;
+			}
+		}
+
+		nav {
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			font-family: "Mitr", sans-serif;
+			display: flex;
+
+			@media (max-width: $menuWidth) {
+				flex-direction: column;
+				justify-content: center;
+				height: 100%;
+				align-items: flex-start;
+			}
+
+			a {
+				position: relative;
+				display: block;
+				color: #ffffff;
+				text-decoration: none;
+				font-size: 19px;
+				font-weight: 500;
+				margin: 0 10px;
+				transition: all 300ms ease-in-out;
+				white-space: nowrap;
+
+				@media (max-width: $menuWidth) {
+					margin: 10px 25px;
+					font-size: 30px;
+				}
+
+				@media (max-width: 1232px) {
+					margin: 10px;
+				}
+			}
+			.pop {
+				background-color: #41d1cf;
+				white-space: normal;
+				text-align: center;
+				color: #321064;
+				font-size: 19px;
+				font-weight: 500;
+				margin: 0 0 0 15px;
+				padding: 8px 15px;
+			}
+			.mobile-feature {
+				display: none;
+
+				@media (max-width: $menuWidth) {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+@keyframes diamondIn {
+	0% {
+		transform: rotate(360deg) scale(-10);
+		opacity: 1;
+	}
+	100% {
+		transform: rotate(0deg) scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

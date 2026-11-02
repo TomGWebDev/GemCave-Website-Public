@@ -1,0 +1,30 @@
+@import "scss/vars";
+
+#whitepaper {
+	.container {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+
+		.left,
+		.right {
+			background-color: #fff;
+			border-radius: 20px;
+			padding: 20px;
+		}
+
+		.dancer {
+			width: 10px;
+			overflow: visible;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			svg {
+				width: 200px;
+				height: 200px;
+			}
+		}
+	}
+}

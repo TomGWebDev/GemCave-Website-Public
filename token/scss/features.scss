@@ -1,0 +1,57 @@
+@import "scss/vars";
+
+#features {
+	position: relative;
+	padding: 50px;
+	background-color: $purple4;
+	overflow: hidden;
+
+	@media (max-width: $tabletWidth) {
+		padding: 30px;
+	}
+	@media (max-width: $mobileWidth) {
+		padding: 30px;
+	}
+
+	.container {
+		@media (max-width: 1000px) {
+			flex-direction: column-reverse;
+		}
+
+		@media (max-width: $mobileWidth) {
+			margin: 0;
+		}
+
+		h1,
+		h2,
+		p {
+			color: $dark;
+		}
+
+		p {
+			max-width: 70%;
+
+			@media (max-width: $tabletWidth) {
+				max-width: 90%;
+			}
+			@media (max-width: $mobileWidth) {
+				max-width: 100%;
+			}
+		}
+	}
+
+	.sprinkles-bg {
+		position: absolute;
+		bottom: -25px;
+		left: 0;
+		width: 100%;
+
+		path {
+			fill: none;
+			stroke-linecap: round;
+			stroke-linejoin: round;
+			stroke-width: 0.2;
+			stroke: $blue2;
+		}
+	}
+}

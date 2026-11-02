@@ -1,0 +1,335 @@
+@import "scss/vars";
+
+body#page-games {
+	@media (max-width: 1300px) {
+		nav .pop {
+			display: none;
+		}
+	}
+
+	#header .logo a img {
+		max-width: 270px;
+		width: 100%;
+	}
+}
+
+#game-dash {
+	padding-top: 250px;
+	overflow: hidden;
+	background-color: #03002a;
+
+	.title-info {
+		margin-bottom: 40px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		@media (max-width: $menuWidth) {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.text-side {
+			max-width: 550px;
+		}
+
+		h1 {
+			margin-bottom: 5px;
+			font-size: 70px;
+			color: #bafeff;
+			font-family: "Ceviche One", cursive;
+			margin-bottom: 25px;
+			line-height: 64%;
+		}
+
+		p {
+			color: $light;
+			margin: 0 0 15px 0;
+			font-weight: 200;
+		}
+	}
+
+	.game-stats {
+		margin: 25px;
+
+		tbody {
+			border: 2px solid #cfcdff;
+			display: block;
+		}
+
+		tr {
+			border: 4px solid $light;
+			display: block;
+
+			border-bottom: 2px solid #cfcdff;
+		}
+		td {
+			color: $light;
+			font-weight: 100;
+			padding: 5px;
+			width: auto;
+			font-size: 13px;
+
+			&.left {
+				width: 140px;
+				font-size: 16px;
+				font-weight: 500;
+			}
+		}
+	}
+	.container {
+		padding: 0 25px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		width: auto;
+	}
+
+	.game-list {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: flex-end;
+
+		@media (max-width: $tabletWidth) {
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	.game-item {
+		.game-item-box {
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-end;
+			cursor: pointer;
+			transition: all 350ms ease-in-out;
+
+			&:hover {
+				transform: scale(1.15);
+			}
+
+			img {
+				width: 100%;
+				max-width: 240px;
+				display: block;
+				overflow: visible;
+
+				@media (max-width: $tabletWidth) {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+#prizeconnect {
+	padding: 20px 40px;
+	border-radius: 15px;
+	background: linear-gradient(
+		180deg,
+		$purple2,
+		$purple3 65%,
+		$purple3 85%,
+		$purple2
+	);
+	color: $light;
+	border: 5px solid $light;
+	margin: 30px auto;
+	font-size: 30px;
+	text-align: center;
+	cursor: pointer;
+	transition: all 350ms ease-in-out;
+
+	&:hover {
+		border-color: $dark;
+	}
+}
+
+#prize-dash {
+	padding: 50px 0;
+	overflow: hidden;
+	background: linear-gradient(
+		180deg,
+		#310155,
+		#5c47af 65%,
+		#5c47af 85%,
+		#310155
+	);
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		padding: 0 25px;
+		width: auto;
+	}
+
+	.prize-form {
+		display: none;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto;
+		border-radius: 15px;
+		border: 4px solid $light;
+		color: $light;
+		padding: 25px;
+
+		&.show {
+			display: flex;
+		}
+		input {
+			background-color: $light;
+			color: $dark;
+			border-radius: 10px;
+			text-align: center;
+		}
+	}
+	.title-info {
+		margin-bottom: 40px;
+		h1 {
+			margin-bottom: 5px;
+			font-size: 70px;
+			color: #bafeff;
+			font-family: "Ceviche One", cursive;
+		}
+
+		p {
+			color: #bafeff;
+			margin: 0;
+			font-weight: 200;
+		}
+	}
+	.prize-list {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: stretch;
+		align-items: center;
+
+		transform: scale(0);
+		margin-top: 30px;
+
+		transition: all 500ms ease-in-out;
+
+		&.show {
+			transform: scale(1);
+		}
+
+		.prize-item {
+			padding: 0;
+			margin: 15px;
+			width: 300px;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: stretch;
+			align-items: stretch;
+
+			.prize-title {
+				background-color: $dark;
+				border: 6px solid $dark;
+				border-bottom: 0;
+				border-radius: 20px 20px 0 0;
+				padding: 5px 10px 10px 10px;
+				letter-spacing: 0px;
+
+				display: flex;
+				flex-direction: row;
+
+				.icon {
+					font-size: 30px;
+					padding-right: 10px;
+
+					svg {
+						display: block;
+						overflow: visible;
+						width: 35px;
+						height: 35px;
+						margin-right: 10px;
+					}
+				}
+				h3 {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					font-size: 24px;
+					font-weight: 900;
+				}
+			}
+
+			.prize-body {
+				border: 6px solid #310155;
+				border-radius: 0 0 0 20px;
+				border-top: 0;
+				height: 160px;
+				padding: 0 20px 20px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+			}
+
+			.count {
+				font-size: 27px;
+				font-weight: 900;
+				height: 41px;
+				padding: 0 10px;
+
+				mix-blend-mode: difference;
+				position: relative;
+				z-index: 10;
+				color: #fff;
+
+				span.big {
+					font-size: 35px;
+				}
+				span.small {
+					font-size: 12px;
+					font-weight: 400;
+				}
+			}
+
+			.info {
+				font-size: 12px;
+				padding: 10px 0;
+			}
+
+			.won {
+				display: none;
+				padding: 5px;
+				font-size: 11px;
+				background-color: $dark;
+				color: $light;
+			}
+
+			.strap {
+				position: relative;
+			}
+
+			.loading {
+				position: absolute;
+				top: 0;
+				left: -3px;
+				width: 100%;
+				border: 3px solid #034344;
+
+				.bar {
+					position: relative;
+					height: 35px;
+
+					.progress {
+						position: absolute;
+						left: 0;
+						top: 0;
+						height: 35px;
+						width: 0%;
+						background-color: #034344;
+						transition: all 500ms ease-in-out;
+					}
+				}
+			}
+		}
+	}
+}

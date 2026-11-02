@@ -1,0 +1,128 @@
+@import "scss/vars";
+
+#topbar {
+	z-index: 900;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+
+	background-image: linear-gradient(90deg, #976fbd, #93d9cc);
+	background-size: 150% 200%;
+	animation: gradient 8s ease infinite;
+	transition: all 300ms ease-in-out;
+
+	@media (max-width: 950px) {
+		.mobhide {
+			display: none;
+		}
+	}
+
+	&.set {
+		background: none;
+
+		.langauges svg {
+			width: 15px;
+		}
+		.links svg {
+			width: 15px;
+		}
+	}
+
+	#google_translate_element {
+		display: none;
+	}
+
+	.container {
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 1400px;
+		margin: 0 auto;
+
+		@media (max-width: $mobileWidth) {
+			flex-direction: column;
+			height: auto;
+		}
+	}
+
+	.contract {
+		background-color: #d9d3de;
+		color: #533a6a;
+		padding: 4px 10px;
+
+		.contract-hash {
+			font-size: 11px;
+			margin: 0 3px;
+		}
+
+		svg {
+			height: 9px;
+			width: 10px;
+			fill: #533a6a;
+		}
+	}
+	.langauges {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+
+		.active svg {
+			opacity: 1;
+		}
+
+		svg {
+			width: 20px;
+			height: 20px;
+			overflow: visible;
+			margin: 5px 2px;
+			cursor: pointer;
+			opacity: 0.28;
+			transition: all 300ms ease-in-out;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	.links {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+
+		a {
+			display: block;
+			text-decoration: none;
+		}
+
+		svg {
+			width: 19px;
+			height: 19px;
+			fill: #fff;
+			overflow: visible;
+			margin: 5px 3px;
+			opacity: 0.6;
+			transition: all 300ms ease-in-out;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

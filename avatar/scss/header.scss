@@ -1,0 +1,146 @@
+@import "scss/vars";
+
+header {
+	z-index: 150;
+	transition: all 400ms ease-in-out;
+	margin: 0;
+
+	@media (max-width: 830px) {
+		margin: 30px;
+	}
+
+	.topbg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		overflow: visible;
+	}
+
+	.container {
+		width: 100%;
+		max-width: 1300px;
+		margin: 0 auto;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-end;
+
+		justify-content: center;
+		align-items: center;
+
+		@media (max-width: 630px) {
+			flex-direction: column;
+		}
+	}
+
+	.header-intro {
+		padding: 0px 0 30px;
+		width: 100%;
+		text-align: center;
+
+		@media (max-width: 440px) {
+			padding: 20px;
+		}
+
+		.introtitleholder {
+			position: relative;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.spaceset {
+			letter-spacing: 0px;
+
+			@media (max-width: 1000px) {
+				letter-spacing: 5px;
+			}
+		}
+		.introtitle {
+			opacity: 0;
+			transition: all 600ms ease-in-out;
+			position: absolute;
+			color: #8accca;
+			line-height: 150%;
+			font-size: 69px;
+			justify-content: center;
+			align-items: center;
+			margin: 0 30px;
+
+			&.show {
+				display: flex;
+				opacity: 1;
+				line-height: 90%;
+			}
+
+			@media (max-width: $mobileWidth) {
+				font-size: 50px;
+			}
+
+			@media (max-width: 400px) {
+				font-size: 40px;
+			}
+		}
+
+		h4 {
+			position: relative;
+			z-index: 1;
+			font-size: 18px;
+			font-family: "Kanit", sans-serif;
+			font-weight: 400;
+			display: block;
+			margin: -50px 0 30px;
+			color: #965ae0;
+			transition: all 600ms ease-in-out;
+			transition-delay: 1200ms;
+
+			&.loaded {
+				margin: 10px 0 30px;
+			}
+		}
+
+		p {
+			font-size: 21px;
+			text-align: center;
+			font-weight: 400;
+			max-width: 950px;
+			letter-spacing: 0.7px;
+			line-height: 110%;
+			margin: 0 auto 20px auto;
+		}
+	}
+
+	.logo-top {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		padding: 25px 25px 0 25px;
+		margin: 0;
+		transition: all 600ms ease-in-out;
+		transition-delay: 700ms;
+		height: 80vh;
+		position: relative;
+		z-index: 5;
+
+		&.loaded {
+			height: 200px;
+		}
+
+		img {
+			height: 100%;
+			max-height: 600px;
+		}
+
+		a {
+			text-decoration: none;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+		}
+	}
+}

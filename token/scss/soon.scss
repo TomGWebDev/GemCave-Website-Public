@@ -1,0 +1,74 @@
+@import "scss/vars";
+
+#soon {
+	position: relative;
+	background-color: $blue2;
+	margin: 0;
+	padding: 100px 50px 150px 50px;
+	overflow: hidden;
+	background: linear-gradient(
+		80deg,
+		$blue3,
+		$blue3 50%,
+		$blue2 80%,
+		$blue2 85%,
+		$blue3
+	);
+
+	p {
+		color: $purple4;
+		max-width: 70%;
+
+		@media (max-width: $tabletWidth) {
+			max-width: 80%;
+		}
+
+		@media (max-width: $mobileWidth) {
+			max-width: 100%;
+		}
+	}
+
+	h1,
+	h2,
+	h3 {
+		color: $blue4;
+		letter-spacing: 1px;
+	}
+
+	h1 {
+		margin-bottom: 5px;
+	}
+	h3 {
+		font-style: italic;
+		font-weight: 800;
+	}
+
+	.logo-bg {
+		position: absolute;
+		bottom: -10vw;
+		right: 0;
+		width: 45%;
+		mix-blend-mode: darken;
+
+		path {
+			stroke: $dark;
+			stroke-width: 0.8px;
+		}
+	}
+
+	.countdown {
+		display: inline-block;
+		font-size: 20px;
+		padding: 10px 30px;
+		border-radius: 20px;
+		border: 4px dotted $dark;
+		margin: 20px auto auto auto;
+		color: $dark;
+		font-weight: 500;
+
+		#clock {
+			display: inline-block;
+			font-weight: 800;
+		}
+	}
+}

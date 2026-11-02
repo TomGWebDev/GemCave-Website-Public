@@ -1,0 +1,85 @@
+@import "scss/vars";
+
+#apps {
+	width: 100%;
+	position: relative;
+	z-index: 111;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+	@media (max-width: 1300px) {
+		flex-wrap: wrap;
+	}
+
+	.item {
+		position: relative;
+		display: block;
+		flex: 1 1;
+		padding: 20px 25px 40px 25px;
+		border-radius: 20px;
+		margin: 15px;
+		background-color: $purple4;
+
+		max-width: 300px;
+
+		background: linear-gradient($purple2 10%, $purple2 20%, $blue2);
+		color: $dark;
+		text-decoration: none;
+		overflow: hidden;
+
+		@media (max-width: $tabletWidth) {
+			min-width: 200px;
+			border-radius: 20px;
+			background: linear-gradient($purple 10%, $purple 20%, $blue2);
+			margin: 15px 10px;
+		}
+
+		&.wait {
+			&:before {
+				mix-blend-mode: color-dodge;
+				overflow: hidden;
+				content: "🟠 SOON";
+			}
+		}
+
+		&:before {
+			mix-blend-mode: color-dodge;
+			overflow: hidden;
+			content: "🟢 PLAY";
+			text-align: center;
+			color: $dark;
+			line-height: 30px;
+			position: absolute;
+			width: 40%;
+			height: 30px;
+			bottom: 15px;
+			border-radius: 20px 0 0 20px;
+			right: 0;
+			background: rgba(255, 255, 255, 0.3);
+			background: linear-gradient(
+				to bottom,
+				rgba(255, 255, 255, 0.1),
+				rgba(255, 255, 255, 0.3)
+			);
+			transition: all 350ms ease-in-out;
+		}
+
+		&:hover {
+			&:before {
+				width: 90%;
+			}
+		}
+
+		h2 {
+			font-size: 18px;
+			color: $light;
+		}
+
+		p {
+			font-weight: 100;
+			color: $light;
+			font-size: 14px;
+		}
+	}
+}
